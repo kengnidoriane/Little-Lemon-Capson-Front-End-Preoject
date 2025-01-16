@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+:root {
+  --primary-green-color: #495E57;
+  --primary-yellow-color: #F4CE14;
+  --secondary-orange-color: #EE9972;
+  --secondary-belge-color: #FBDABB;
+  --secondary-grey-color: #EDEFEE;
+  --secondary-black-color: #333333;
+  /* fonts variables */
+
+  /* Display title font */
+  --font-display-title: 'Markazi Text', serif;
+  --font-display-title-size: 64px;
+
+  /* Subtitle font */
+  --font-subtitle-size: 40px;
+
+  /* Lead text font */
+  --font-lead-text: 'Karla', sans-serif;
+  --font-lead-text-size: 18px;
+
+  /* Section title font */
+  --font-section-title-size: 20px;
+  --font-section-title-weight: bold;
+
+  /* Categories font */
+  --font-categories-size: 16px;
+  --font-categories-weight: bold;
+
+  /* Card title font */
+  --font-card-title-size: 18px;
+  --font-card-title-weight: bold;
+
+  /* Paragraph text font */
+  --font-paragraph-size: 16pt;
+  --font-paragraph-line-height: 1.5;
+  --font-paragraph-max-chars: 65;
+
+  /* Highlight text font */
+  --font-highlight-size: 16px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  background-color: aqua;
+  grid-column: 3/ span 9;
 }

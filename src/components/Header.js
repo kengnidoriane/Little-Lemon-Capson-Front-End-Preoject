@@ -3,9 +3,9 @@ import Nav from './Nav'
 
 export default function Header() {
   return (
-    <>
+    <div className='header'>
         <img alt='logo'/>
         <Nav />
-    </>
+    </div>
   )
 }
