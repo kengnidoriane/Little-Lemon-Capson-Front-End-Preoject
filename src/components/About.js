@@ -11,8 +11,8 @@ const About = () => {
                 Notre mission est de vous offrir une expérience culinaire exceptionnelle avec des ingrédients frais et de qualité.
             </p>
             <div className="photo-container">
-                <img src="/images/photo1.jpg" alt="Photo 1" className="owner restaurant" />
-                <img src="/images/photo2.jpg" alt="Photo 2" className="owner restaurant" />
+                <img src="/images/photo1.jpg" alt="owner restaurant" className="photo" />
+                <img src="/images/photo2.jpg" alt="owner restaurant" className="photo" />
             </div>
         </section>
     );
