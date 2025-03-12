@@ -154,14 +154,6 @@
   align-items: center;
 }
 
-.cta-button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
 .special-menu-cards {
   display: flex;
   flex-wrap: wrap;
@@ -189,4 +181,34 @@
 .order-link {
   color: #007bff;
   text-decoration: none;
+}
+
+
+/* About section style */
+
+.about {
+  padding: 20px;
+  text-align: center;
+}
+
+.photo-container {
+  position: relative;
+  width: 300px; /* Ajustez la largeur selon vos besoins */
+  margin: 20px auto; /* Centrer le conteneur */
+}
+
+.photo {
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.photo:first-child {
+  top: 0; /* Positionne la première photo en haut */
+  left: 0; /* Positionne la première photo à gauche */
+}
+
+.photo:last-child {
+  top: 20px; /* Décale la deuxième photo vers le bas */
+  left: 20px; /* Décale la deuxième photo vers la droite */
 }
