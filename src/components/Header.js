@@ -1,11 +1,10 @@
 import React from 'react'
-import Nav from './Nav'
+import Navbar from './Navbar'
 
 export default function Header() {
   return (
     <div className='header'>
-        <img alt='logo'/>
-        <Nav />
+        <Navbar />
     </div>
   )
 }

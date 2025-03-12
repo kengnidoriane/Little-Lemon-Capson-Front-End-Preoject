@@ -37,15 +37,106 @@
 
   /* Highlight text font */
   --font-highlight-size: 16px
+
+  --max-with: 1200px;
 }
 
-.body {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
 
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
-.header {
-  background-color: aqua;
-  grid-column: 3/ span 9;
+.navbar-logo img {
+  height: 50px; /* Hauteur du logo */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Espacement entre les liens */
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  color: black;
+  font-weight: 500;
+  text-decoration: none; /* Pas de soulignement */
+  transition: color 0.3s; /* Effet de transition */
+}
+
+.navbar-links a:hover {
+  color: #f0a500; /* Couleur au survol */
+}
+
+
+/* hero section style */
+
+.hero {
+  background-color: var(--primary-green-color);
+  
+}
+
+.hero-total-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  color: var(--primary-yellow-color);
+  font-size: 3rem; /* Taille du titre */
+  margin: 0;
+}
+
+.hero-content h2 {
+  color: var(--secondary-grey-color);
+  font-size: 2rem; /* Taille du sous-titre */
+  margin: 0.5rem 0;
+}
+
+.hero-content p {
+  color: white;
+  font-size: 1.2rem; /* Taille de la description */
+  margin: 1rem 0;
+}
+
+.cta-button {
+  padding: 10px 20px; /* Espacement du bouton */
+  font-size: 1rem; /* Taille de la police */
+  background-color: var(--primary-yellow-color); /* Couleur du bouton */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en main */
+  transition: background-color 0.3s; /* Effet de transition */
+}
+
+.cta-button:hover {
+  background-color: --se; /* Couleur au survol */
+}
+
+.hero-image {
+  max-width: 20%; /* Limite la largeur de l'image */
+  overflow: visible; /* Permet à l'image de dépasser */
+}
+
+.hero-image img {
+  width: 100%; /* Prend toute la largeur de son conteneur */
+  height: auto; /* Garde les proportions de l'image */
+  transform: translateY(30%); /* Déplace l'image vers le haut */
+  border-radius: 10px;
 }
