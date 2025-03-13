@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Importation de Link depuis react-router-dom
-import './Footer.css'; // Assurez-vous d'importer le fichier CSS pour le style
 
 const Footer = () => {
     return (

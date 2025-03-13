@@ -1,5 +1,4 @@
 import React from 'react';
-import './Testimonial.css'; // Assurez-vous d'importer le fichier CSS pour le style
 
 const testimonialsData = [
     {

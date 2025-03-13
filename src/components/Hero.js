@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -11,7 +12,7 @@ const Hero = () => {
                         Découvrez notre restaurant, où la cuisine méditerranéenne rencontre l'hospitalité chaleureuse.
                         Réservez une table pour une expérience inoubliable !
                     </p>
-                    <button className="cta-button">Reserve a Table</button>
+                    <button className="cta-button"><Link to='/booking-table'>Book a table</Link></button>
                 </div>
                 <div className="hero-image">
                     <img src="/images/hero_image.jpg" alt="Delicious food" /> {/* Remplacez "hero-image.jpg" par le chemin réel de votre image */}
