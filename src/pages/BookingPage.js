@@ -1,27 +1,18 @@
 import React, { useState, useReducer } from 'react';
 import BookingForm from '../components/BookingForm';
 import ReservationSummary from '../components/ReservationSummary';
-import BookingConfirmation from '../components/BookingConfirmation';
+import ConfirmedBooking from '../components/ConfirmedBooking';
 
 // Initial state for available times
 const initializeTimes = () => {
-    return [
-        "12:00 PM",
-        "1:00 PM",
-        "2:00 PM",
-        "6:00 PM",
-        "7:00 PM",
-        "8:00 PM",
-        "9:00 PM"
-    ];
+    return []; // Initialement vide, car nous allons le remplir avec l'API
 };
 
 // Reducer function to manage available times
 const timesReducer = (state, action) => {
     switch (action.type) {
         case 'UPDATE_TIMES':
-            // For now, we return the same available times regardless of the date
-            return initializeTimes(); // You can modify this logic later
+            return action.payload; // Mettre à jour avec les heures récupérées
         default:
             return state;
     }
@@ -38,15 +29,18 @@ const BookingPage = () => {
     };
 
     const handleBack = () => {
-        setStep(1);
+        setStep(1); // Revenir à l'étape 1
     };
 
     const handleConfirm = () => {
-        setStep(3); // Move to confirmation step
+        setStep(3); // Passer à l'étape de confirmation
     };
 
+    // Mettre à jour les heures disponibles en fonction de la date sélectionnée
     const updateTimes = (selectedDate) => {
-        dispatch({ type: 'UPDATE_TIMES', date: selectedDate });
+        fetchAPI(selectedDate).then(times => {
+            dispatch({ type: 'UPDATE_TIMES', payload: times }); // Mettre à jour le state avec les heures récupérées
+        });
     };
 
     return (
@@ -56,6 +50,7 @@ const BookingPage = () => {
                     onContinue={handleContinue} 
                     availableTimes={availableTimes} 
                     updateTimes={updateTimes} 
+                    initialData={reservationData} // Passer les données initiales
                 />
             )}
             {step === 2 && (
@@ -65,7 +60,7 @@ const BookingPage = () => {
                     onConfirm={handleConfirm}
                 />
             )}
-            {step === 3 && <BookingConfirmation />}
+            {step === 3 && <ConfirmedBooking />}
         </div>
     );
 };

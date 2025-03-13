@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const BookingForm = ({ onContinue, availableTimes, updateTimes }) => {
+const BookingForm = ({ onContinue, availableTimes, updateTimes, initialData }) => {
     const [formData, setFormData] = useState({
         name: '',
         occasion: '',
@@ -10,19 +10,26 @@ const BookingForm = ({ onContinue, availableTimes, updateTimes }) => {
         email: '',
     });
 
+    useEffect(() => {
+        // Remplir les champs avec les données initiales si elles existent
+        if (initialData) {
+            setFormData(initialData);
+        }
+    }, [initialData]);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
 
-        // If the date is changed, update available times
+        // Si la date est modifiée, mettre à jour les heures disponibles
         if (name === 'date') {
-            updateTimes(value); // Dispatch action to update times
+            updateTimes(value); // Déclencher l'action pour mettre à jour les heures
         }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onContinue(formData);
+        onContinue(formData); // Passer les données du formulaire au composant parent
     };
 
     return (
