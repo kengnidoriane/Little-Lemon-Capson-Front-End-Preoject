@@ -31,7 +31,8 @@ const specials = [
 const SpecialMenu = () => {
     return (
         <section className="special-menu">
-            <div className="special-menu-header">
+           <div className='special-menu-container'>
+           <div className="special-menu-header">
                 <h2>This Week's Specials</h2>
                 <button className="cta-button">Online Menu</button>
             </div>
@@ -42,10 +43,11 @@ const SpecialMenu = () => {
                         <h3>{special.name}</h3>
                         <p className="price">{special.price}</p>
                         <p className="description">{special.description}</p>
-                        <a href={special.orderLink} className="order-link">Order Delivery</a>
+                        <a href={special.orderLink} className="order-link">Order Delivery <img src='/images/basket'/></a>
                     </div>
                 ))}
             </div>
+           </div>
         </section>
     );
 };

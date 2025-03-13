@@ -2,11 +2,7 @@ import React, { useState, useReducer } from 'react';
 import BookingForm from '../components/BookingForm';
 import ReservationSummary from '../components/ReservationSummary';
 import ConfirmedBooking from '../components/ConfirmedBooking';
-
-// Initial state for available times
-const initializeTimes = () => {
-    return []; // Initialement vide, car nous allons le remplir avec l'API
-};
+import { fetchAPI } from '../services/api';
 
 // Reducer function to manage available times
 const timesReducer = (state, action) => {
@@ -19,9 +15,22 @@ const timesReducer = (state, action) => {
 };
 
 const BookingPage = () => {
+
+    // Initial state for available times
+    const initializeTimes = () => {
+        const today = new Date().toISOString().split('T')[0];
+        return fetchAPI(today);
+    };
+
+    const [availableTimes, dispatch] = useReducer(timesReducer, initializeTimes());
+
+     // Mettre à jour les heures disponibles en fonction de la date sélectionnée
+     const updateTimes = (selectedDate) => {
+        const times = fetchAPI(selectedDate);
+        dispatch({ type: 'UPDATE_TIMES', payload: times });
+    };
     const [step, setStep] = useState(1);
     const [reservationData, setReservationData] = useState({});
-    const [availableTimes, dispatch] = useReducer(timesReducer, initializeTimes());
 
     const handleContinue = (data) => {
         setReservationData(data);
@@ -36,12 +45,7 @@ const BookingPage = () => {
         setStep(3); // Passer à l'étape de confirmation
     };
 
-    // Mettre à jour les heures disponibles en fonction de la date sélectionnée
-    const updateTimes = (selectedDate) => {
-        fetchAPI(selectedDate).then(times => {
-            dispatch({ type: 'UPDATE_TIMES', payload: times }); // Mettre à jour le state avec les heures récupérées
-        });
-    };
+   
 
     return (
         <div className="app-container">

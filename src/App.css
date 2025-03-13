@@ -36,7 +36,7 @@
   --font-paragraph-max-chars: 65;
 
   /* Highlight text font */
-  --font-highlight-size: 16px
+  --font-highlight-size: 16px;
 
   --max-with: 1200px;
 }
@@ -146,6 +146,11 @@
 
  .special-menu {
   padding: 20px;
+}
+
+.special-menu-container {
+  max-width: var(--max-with);
+  margin: 0 auto;
 }
 
 .special-menu-header {
