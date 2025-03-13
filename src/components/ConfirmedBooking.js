@@ -10,4 +10,4 @@ const ConfirmedBooking = () => {
     );
 };
 
-export default BookingConfirmation;
+export default ConfirmedBooking;
