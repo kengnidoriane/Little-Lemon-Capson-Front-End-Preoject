@@ -300,12 +300,17 @@ body {
 }
 
 .about-text h1 {
-  color: var(--primary-yellow-color);
+  color: var(--primary-green-color);
+  font-size: var(--font-display-title-size);
   font-family: var(--font-display-title);
 }
 
 .about-text h2 {
   margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  line-height: 1.8;
 }
 
 .photo-container {
