@@ -7,7 +7,7 @@ const specials = [
         name: 'Greek salad',
         price: '12.99 €',
         description: 'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.',
-        image: '/images/spaghetti.jpg', // Assurez-vous que l'image est dans le dossier public/images
+        image: '/images/greek salad.jpg', // Assurez-vous que l'image est dans le dossier public/images
         orderLink: '#order-greek-salad'
     },
     {
@@ -15,7 +15,7 @@ const specials = [
         name: 'Bruchetta',
         price: '5.99 €',
         description: 'Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.',
-        image: '/images/pizza.jpg', // Assurez-vous que l'image est dans le dossier public/images
+        image: '/images/bruchetta.svg', // Assurez-vous que l'image est dans le dossier public/images
         orderLink: '#order-bruchetta'
     },
     {
@@ -23,7 +23,7 @@ const specials = [
         name: 'Lemon dessert',
         price: '3.99 €',
         description: 'This comes straight from grandma\'s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.',
-        image: '/images/salad.jpg', // Assurez-vous que l'image est dans le dossier public/images
+        image: '/images/lemon dessert.jpg', // Assurez-vous que l'image est dans le dossier public/images
         orderLink: '#order-lemon-dessert'
     }
 ];
@@ -40,8 +40,10 @@ const SpecialMenu = () => {
                 {specials.map(special => (
                     <div key={special.id} className="special-card">
                         <img src={special.image} alt={special.name} />
-                        <h3>{special.name}</h3>
-                        <p className="price">{special.price}</p>
+                        <div className='name-price'>
+                            <h3>{special.name}</h3>
+                            <p className="price">{special.price}</p>
+                        </div>
                         <p className="description">{special.description}</p>
                         <a href={special.orderLink} className="order-link">Order Delivery <img src='/images/basket'/></a>
                     </div>
