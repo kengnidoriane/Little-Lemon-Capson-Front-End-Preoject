@@ -48,6 +48,9 @@
   --max-with: 1200px;
 }
 
+body {
+  font-family: var(--font-lead-text);
+}
 
 
 .navbar {
@@ -106,6 +109,7 @@
 
 .hero-content h1 {
   color: var(--primary-yellow-color);
+  font-family: var(--font-display-title);
   font-size: 3rem;
   margin: 0;
 }
@@ -113,7 +117,7 @@
 .hero-content h2 {
   color: var(--secondary-grey-color);
   font-size: 2rem;
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
 }
 
 .hero-content p {
@@ -132,6 +136,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 2rem;
 }
 
 .cta-button:hover {
@@ -294,7 +299,15 @@
   text-align: left;
 }
 
-.about-te
+.about-text h1 {
+  color: var(--primary-yellow-color);
+  font-family: var(--font-display-title);
+}
+
+.about-text h2 {
+  margin-bottom: 1.5rem;
+}
+
 .photo-container {
   position: relative;
   width: 300px;
