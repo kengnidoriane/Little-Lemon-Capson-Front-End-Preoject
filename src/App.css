@@ -51,13 +51,13 @@
 }
 
 .navbar-logo img {
-  height: 50px; /* Hauteur du logo */
+  height: 50px;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 20px; /* Espacement entre les liens */
+  gap: 20px;
 }
 
 .navbar-links li {
@@ -67,12 +67,12 @@
 .navbar-links a {
   color: black;
   font-weight: 500;
-  text-decoration: none; /* Pas de soulignement */
-  transition: color 0.3s; /* Effet de transition */
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .navbar-links a:hover {
-  color: #f0a500; /* Couleur au survol */
+  color: #f0a500; 
 }
 
 
@@ -99,45 +99,45 @@
 
 .hero-content h1 {
   color: var(--primary-yellow-color);
-  font-size: 3rem; /* Taille du titre */
+  font-size: 3rem;
   margin: 0;
 }
 
 .hero-content h2 {
   color: var(--secondary-grey-color);
-  font-size: 2rem; /* Taille du sous-titre */
+  font-size: 2rem;
   margin: 0.5rem 0;
 }
 
 .hero-content p {
   color: white;
-  font-size: 1.2rem; /* Taille de la description */
+  font-size: 1.2rem;
   margin: 1rem 0;
 }
 
 .cta-button {
-  padding: 10px 20px; /* Espacement du bouton */
-  font-size: 1rem; /* Taille de la police */
-  background-color: var(--primary-yellow-color); /* Couleur du bouton */
-  border: none; /* Pas de bordure */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer; /* Curseur en main */
-  transition: background-color 0.3s; /* Effet de transition */
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--primary-yellow-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-  background-color: --se; /* Couleur au survol */
+  background-color: --se;
 }
 
 .hero-image {
-  max-width: 20%; /* Limite la largeur de l'image */
-  overflow: visible; /* Permet à l'image de dépasser */
+  max-width: 20%;
+  overflow: visible;
 }
 
 .hero-image img {
-  width: 100%; /* Prend toute la largeur de son conteneur */
-  height: auto; /* Garde les proportions de l'image */
-  transform: translateY(30%); /* Déplace l'image vers le haut */
+  width: 100%;
+  height: auto;
+  transform: translateY(30%);
   border-radius: 10px;
 }
 
@@ -222,7 +222,7 @@
 .testimonial-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Espace entre les cartes */
+  justify-content: space-around;
 }
 
 .testimonial-card {
@@ -231,13 +231,13 @@
   border-radius: 8px;
   padding: 15px;
   margin: 10px;
-  width: 300px; /* Largeur des cartes */
+  width: 300px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .rating {
-  font-size: 20px; /* Taille des étoiles */
-  color: gold; /* Couleur des étoiles */
+  font-size: 20px;
+  color: gold;
 }
 
 .user-profile {
@@ -247,9 +247,9 @@
 }
 
 .user-photo {
-  border-radius: 50%; /* Photo ronde */
-  width: 50px; /* Taille de la photo */
-  height: 50px; /* Taille de la photo */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
 }
 
@@ -258,7 +258,7 @@
 }
 
 .review {
-  font-style: italic; /* Style de la critique */
+  font-style: italic;
 }
 
 
@@ -291,13 +291,13 @@
 }
 
 .photo:first-child {
-  top: 0; /* Positionne la première photo en haut */
-  left: 0; /* Positionne la première photo à gauche */
+  top: 0;
+  left: 0;
 }
 
 .photo:last-child {
-  top: -170px; /* Décale la deuxième photo vers le bas */
-  left: 240px; /* Décale la deuxième photo vers la droite */
+  top: -170px;
+  left: 240px; 
 }
 
 
@@ -311,14 +311,14 @@
 
 .footer-container {
   display: flex;
-  justify-content: space-around; /* Espace entre les colonnes */
-  flex-wrap: wrap; /* Permet aux colonnes de s'ajuster sur plusieurs lignes si nécessaire */
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .footer-column {
-  flex: 1; /* Chaque colonne prend une part égale de l'espace */
-  margin: 10px; /* Marge entre les colonnes */
-  min-width: 200px; /* Largeur minimale pour chaque colonne */
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
 }
 
 .footer-column h3 {
@@ -326,17 +326,17 @@
 }
 
 .footer-column ul {
-  list-style-type: none; /* Supprime les puces */
-  padding: 0; /* Supprime le padding par défaut */
+  list-style-type: none;
+  padding: 0;
 }
 
 .footer-column a {
-  color: white; /* Couleur des liens */
-  text-decoration: none; /* Supprime le soulignement */
+  color: white;
+  text-decoration: none;
 }
 
 .footer-column a:hover {
-  text-decoration: underline; /* Sous-ligne au survol */
+  text-decoration: underline;
 }
 
 
@@ -415,17 +415,4 @@ select {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-
-button {
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
 }
