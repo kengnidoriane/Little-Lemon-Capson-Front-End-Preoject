@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-green-color: #495E57;
   --primary-yellow-color: #F4CE14;
@@ -119,6 +126,8 @@
   padding: 10px 20px;
   font-size: 1rem;
   background-color: var(--primary-yellow-color);
+  color: var(--secondary-black-color);
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -126,7 +135,7 @@
 }
 
 .cta-button:hover {
-  background-color: --se;
+  background-color: var(--secondary-orange-color);
 }
 
 .hero-image {
@@ -160,6 +169,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 3rem;
 }
 
 .special-menu-header button {
@@ -206,9 +216,15 @@
 }
 
 .order-link {
-  color: #007bff;
+  color: var(--secondary-black-color);
+
   text-decoration: none;
 }
+
+ .basket {
+  display: inline-block;
+  height: 1rem;
+ }
 
 /* Testimonial section style */
 
@@ -268,15 +284,17 @@
   display: flex;
   justify-content: space-between;
   max-width: var(--max-with);
-  margin: 10 auto;
+  margin: 15rem auto;
   padding: 20px;
   text-align: center;
 }
 
 .about-text {
   max-width: 300px;
+  text-align: left;
 }
 
+.about-te
 .photo-container {
   position: relative;
   width: 300px;
@@ -361,22 +379,6 @@ select {
   width: 100%;
 }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-
-
-
 .confirmation {
   text-align: center;
   padding: 20px;
@@ -395,9 +397,7 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  text-align: center;
-}
+
 
 .booking-form,
 .reservation-summary {
@@ -416,3 +416,4 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+

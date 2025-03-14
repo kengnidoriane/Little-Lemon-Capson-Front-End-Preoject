@@ -45,7 +45,10 @@ const SpecialMenu = () => {
                             <p className="price">{special.price}</p>
                         </div>
                         <p className="description">{special.description}</p>
-                        <a href={special.orderLink} className="order-link">Order Delivery <img src='/images/basket'/></a>
+                        <div>
+                            <a href={special.orderLink} className="order-link">Order Delivery <img src='/images/basket.svg' alt='basket' className='basket'/></a>
+
+                        </div>
                     </div>
                 ))}
             </div>
